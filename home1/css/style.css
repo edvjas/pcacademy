@@ -1,0 +1,8 @@
+textarea {
+    overflow: hidden;
+    resize: none;
+    border-width: 2px; 
+    line-height: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
