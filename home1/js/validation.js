@@ -5,7 +5,6 @@ let te = document.getElementById('myTextarea')
 te.addEventListener('input', resizeTextArea)
 
 function resizeTextArea () {
-
   let lineHeight = window.getComputedStyle(this, null).getPropertyValue('line-height')
   let paddingTop = window.getComputedStyle(this, null).getPropertyValue('padding-top')
   let paddingbottom = window.getComputedStyle(this, null).getPropertyValue('padding-bottom')
