@@ -1,8 +1,8 @@
 let minRows = 2
 let maxRows = 4
 
-let te = document.getElementById('myTextarea')
-te.addEventListener('input', resizeTextArea)
+let textArea = document.getElementById('myTextarea')
+textArea.addEventListener('input', resizeTextArea)
 
 function resizeTextArea () {
   let lineHeight = window.getComputedStyle(this, null).getPropertyValue('line-height')
@@ -11,11 +11,11 @@ function resizeTextArea () {
   let borderTop = window.getComputedStyle(this, null).getPropertyValue('border-top')
   let borderBottom = window.getComputedStyle(this, null).getPropertyValue('border-bottom')
 
-  let taLineHeightParsed = parseFloat(lineHeight)
   let padding = parseFloat(paddingbottom) + parseFloat(paddingTop)
   let border = parseFloat(borderTop) + parseFloat(borderBottom)
-  let taHeight = this.scrollHeight - padding // Get the scroll height of the textarea
+  let taLineHeightParsed = parseFloat(lineHeight)
 
+  let taHeight = this.scrollHeight - padding // Get the scroll height of the textarea
   let numberOfLines = Math.floor(taHeight / taLineHeightParsed)
   if (numberOfLines <= minRows || this.value === '') {
     let newHeight = minRows * taLineHeightParsed + border + padding + 'px'
