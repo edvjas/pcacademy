@@ -1,8 +1,5 @@
-let minRows = 2
-let maxRows = 4
-
-let textArea = document.getElementById('myTextarea')
-textArea.addEventListener('input', resizeTextArea)
+let minRows = 3
+let maxRows = 5
 
 function resizeTextArea () {
   let lineHeight = window.getComputedStyle(this, null).getPropertyValue('line-height')
@@ -29,4 +26,10 @@ function resizeTextArea () {
     this.style.height = newHeight
     this.style.overflowY = 'hidden'
   }
+}
+
+window.onload = () => {
+  let textArea = document.getElementById('myTextarea')
+  textArea.addEventListener('input', resizeTextArea)
+  textArea.dispatchEvent(new Event('input'))
 }
