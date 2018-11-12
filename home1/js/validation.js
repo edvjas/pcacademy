@@ -1,5 +1,5 @@
-let minRows = 8
-let maxRows = 5
+let minRows = 2
+let maxRows = 8
 
 function resizeTextArea () {
   let lineHeight = window.getComputedStyle(this, null).getPropertyValue('line-height')
