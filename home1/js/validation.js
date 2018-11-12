@@ -1,4 +1,4 @@
-let minRows = 3
+let minRows = 8
 let maxRows = 5
 
 function resizeTextArea () {
@@ -17,6 +17,7 @@ function resizeTextArea () {
   if (numberOfLines <= minRows || this.value === '') {
     let newHeight = minRows * taLineHeightParsed + border + padding + 'px'
     this.style.height = newHeight
+    this.style.overflowY = 'hidden'
   } else if (numberOfLines > maxRows) {
     let newHeight = maxRows * taLineHeightParsed + border + padding + 'px'
     this.style.height = newHeight
